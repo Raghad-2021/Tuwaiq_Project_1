@@ -1,17 +1,23 @@
   body{
-        background: url(858-1.jpg);
-        background-size: 1500px;
-        background-repeat: no-repeat;
+        
+        background-color: rgb(118, 138, 29);
+        
       }
-      .container{
-          max-width: 88%;
-          margin: auto;
-      }
-      .bg-dark {
-          background: cornflowerblue;
-          color: crimson;
-      }
+  
+ 
+  h1 {
+    text-align: center;
+  }
+  
+  
+  
 
+  
+
+
+      
+      
+      
 
 
 
