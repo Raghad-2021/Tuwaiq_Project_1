@@ -1,21 +1,26 @@
 const div8 = $("#div8");
-const inputname =$("#name");
+const inputname = $("#name");
 const inputimg = $("#img");
 const divone = $("#div1");
 const testDiv = $("#test");
+const delet = $("#del");
 
 
+
+// لاخفاء حدث
 let divtree = $("#div1");
 function hideHandler() {
   divtree.hide();
 }
+
+
+// لاظهار حدث
 function showHandler() {
   divtree.show();
 }
-let div7 = $("#div3");
-function deletHandler() {
-  div7.remove();
-}
+
+
+
 
 const smartarray = [
   {
@@ -34,20 +39,21 @@ const smartarray = [
     par: "Wireless On Ear HeadphonesBluetooth WH-CH510 Black ",
   },
 ];
-
+//for loop to array of object renderarr and 
+// function render   create elements
 function renderarr(array) {
   for (let i = 0; i < array.length; i++) {
-    const div =
-     $(`<div"> 
+    const div = $(`<div"> 
      <img id="img" src="${array[i].img}" alt="">
      <h1>${array[i].Name}</h1>
+     <button class="but" id=""+${i}  onclick="dele(${i})"> delete </button>
      </div>`);
-     testDiv.append(div);
+    testDiv.append(div);
   }
 }
 
 renderarr(smartarray);
-
+//اسمح للمستخدم يضيف بيانات وتطلع 
 function addsm() {
   const newAdd = {
     Name: inputname.val(),
@@ -57,3 +63,10 @@ function addsm() {
   renderarr([newAdd]);
 }
 
+
+// لحذف الصور
+function dele(id) {
+  smartarray.splice(id, 1)
+  testDiv.html("")
+  renderArr(smartarray);
+}

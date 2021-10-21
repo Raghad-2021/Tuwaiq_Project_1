@@ -9,6 +9,15 @@
     text-align: center;
   }
   
+  h1 {
+    box-shadow: royalblue ;
+  }
+  img {
+    max-width: 30%;
+    max-height: 30%;
+    margin: 0 38%;
+  }
+  
   
   
 
